@@ -1,0 +1,32 @@
+.activity {
+  padding-top: 0;
+  &__title {
+    margin-bottom: var(--typical-margin);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--typical-gap);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 27px 0px;
+
+    color: var(--primary-white-color);
+    background-color: var(--activity-background-color);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.14;
+  }
+}
