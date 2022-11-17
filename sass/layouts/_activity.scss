@@ -1,32 +1,41 @@
 .activity {
-  padding-top: 0;
-  &__title {
-    margin-bottom: var(--typical-margin);
+  display: none;
+
+  @include desktop {
+    display: block;
   }
+}
+.activity {
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--typical-gap);
-  }
+    padding-top: 0;
+    &__title {
+      margin-bottom: var(--typical-margin);
+    }
 
-  &__item {
-    position: relative;
-  }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--typical-gap);
+    }
 
-  &__text {
-    position: absolute;
-    bottom: 0;
+    &__item {
+      position: relative;
+    }
 
-    width: 100%;
-    padding: 27px 0px;
+    &__text {
+      position: absolute;
+      bottom: 0;
 
-    color: var(--primary-white-color);
-    background-color: var(--activity-background-color);
+      width: 100%;
+      padding: 27px 0px;
 
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.14;
-  }
+      color: var(--primary-white-color);
+      background-color: var(--activity-background-color);
+
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.14;
+    }
+  
 }
