@@ -8,11 +8,21 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
+    @include mobile {
+        max-width: 450px;
+    }
+    @include mobile {
+        max-width: 738px;
+    }
+    @include desktop {
+        max-width: 1200px;
+    }
+    
 }
 
 .list {
@@ -33,6 +43,11 @@ img {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {    
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }

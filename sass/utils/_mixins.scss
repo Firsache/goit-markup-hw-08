@@ -1,17 +1,31 @@
-@mixin fonts($fs, $lh, $fw: 400, $ls: 0.01em) {
-  font-size: $fs;
-  line-height: calc($lh / $fs);
-  font-weight: $fw;
-  letter-spacing: $ls;
+// Шаблонні міксини для медіа
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
 
-@mixin section-indent($pt: 50px, $pb: $pt) {
-  padding-top: $pt;
-  padding-bottom: $pb;
+// Міксин для медіа з налаштуванням
+
+@mixin min-media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
 }
 
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+// Міксин для калькуляції ширини
+
+@mixin calc($count) {
+  width: calc((100% - 30px * ($count - 1)) / $count);
 }

@@ -8,4 +8,9 @@
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        text-align: left;
+    }
 }
