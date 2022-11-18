@@ -6,10 +6,12 @@
 @import './base/common';
 @import './base/reset';
 
+@import './components/section-title';
+@import './components/pre-title';
 @import './components/btn';
 @import './components/modal';
-@import './components/pre-title';
-@import './components/section-title';
+
+
 
 
 @import './layouts/header';
