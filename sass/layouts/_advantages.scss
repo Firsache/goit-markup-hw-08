@@ -2,10 +2,20 @@
 
     &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--typical-gap);
     }
     &__item {
-    flex-basis: calc((100% - 3 * 30px) / 4);
+        width: 100%;
+        @include tablet {
+            flex-basis: calc((100% - 1 * 30px) / 2);
+        }
+
+        @include desktop {
+            flex-basis: calc((100% - 3 * 30px) / 4);
+        }
+    
     }
     &__text{
     line-height: 1.71;
