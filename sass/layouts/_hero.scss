@@ -7,27 +7,43 @@
     text-align: center;
 
     background-color: var(--dark-background-color);
-
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(/images/hero_mob_1x.jpg);
-        @include tablet {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url(/images/hero_tab_1x.jpg);
-            max-width: 768px;
-        }
-        @include desktop {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url(/images/hero_desktop_1x.jpg);
-            padding-top: 200px;
-            padding-bottom: 200px;
-            max-width: 1600px;  
-        }
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_mob_1x.jpg);
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_mob_2x.jpg);
+    }
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_tab_1x.jpg);
+        max-width: 768px;
+        @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_tab_2x.jpg);
+    }
+    }
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_desktop_1x.jpg);
+        @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../../images/hero_desktop_2x.jpg);
+    }
+        padding-top: 200px;
+        padding-bottom: 200px;
+        max-width: 1600px;  
+    }
+    
 
     &__title {
         max-width: 360px;
@@ -43,18 +59,12 @@
         line-height: 1.62;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        @include tablet {
+
+        @include desktop {
+            max-width: 696px;
             font-size: 44px;
             line-height: 1.36;
         }
-        @include desktop {
-            max-width: 696px;
-        }
-        
-        
-    }
-    &__button {
-        
     }
 }
 

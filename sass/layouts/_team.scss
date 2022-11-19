@@ -29,11 +29,10 @@
         border-radius: 0px 0px 4px 4px;
     }
     &__member{
-        padding-top: 24px;
+        padding-top: 30px;
         padding-bottom: 24px;
 
-        @include tablet {    
-            padding-top: 30px;
+        @include tablet {
             padding-bottom: 30px;
         }        
     }
