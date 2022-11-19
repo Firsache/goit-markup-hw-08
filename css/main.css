@@ -97,6 +97,38 @@ img {
   }
 }
 
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--title-text-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    text-align: left;
+  }
+}
+
 .button {
   border-radius: 4px;
   border: none;
@@ -193,8 +225,10 @@ img {
 
 .modal-title {
   margin-bottom: 12px;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
+  letter-spacing: 0.03em;
   text-transform: none;
   text-align: center;
 }
@@ -360,38 +394,6 @@ img {
   text-underline-position: under;
 }
 
-.title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: var(--title-text-color);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .title {
-    text-align: left;
-  }
-}
-
-.section-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.17;
-  text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .section-title {
-    font-size: 36px;
-    line-height: 1.16;
-  }
-}
-
 .header {
   border-bottom: 1px solid var(--header-border);
 }
@@ -472,40 +474,55 @@ img {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
   margin: 0 auto;
   text-align: center;
   background-color: var(--dark-background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero_mob_1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero_desktop_1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero_tab_1x.jpg);
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero_desktop_1x.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
   }
 }
 .hero__title {
-  width: 696px;
+  max-width: 360px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+  }
+}
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
