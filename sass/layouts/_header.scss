@@ -6,12 +6,12 @@
     align-items: center;
   }
   &__nav {
-    margin-left: 93px;
+    margin-left: 93px; 
   }
   &__auth {
     display: flex;
     gap: 50px;
-    margin-left: auto;
+    margin-left: auto;     
   }
 }
 
@@ -30,7 +30,7 @@
 .menu-nav {
   display: flex;
   gap: 50px;
-
+  
   &__link {
     display: block;
     padding-top: 32px;
@@ -93,4 +93,9 @@
   &__icon {
     fill: currentColor;
   }
+}
+
+.header__nav,
+.header__auth {
+  display: none; 
 }
