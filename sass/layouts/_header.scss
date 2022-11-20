@@ -7,11 +7,13 @@
   }
   &__nav {
     margin-left: 93px;
+    display: none;
   }
   &__auth {
     display: flex;
     gap: 50px;
     margin-left: auto;
+    display: none;
   }
 }
 .logo {
