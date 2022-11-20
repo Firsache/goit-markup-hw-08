@@ -15,7 +15,9 @@
 
     &__item {
         text-align: center;
-        flex-basis: 450px;
+        flex-basis: 350px;
+        @include mobile {
+            flex-basis: 450px;
         @include tablet {
             flex-basis: calc((100% - 1 * 30px) / 2);
         }
