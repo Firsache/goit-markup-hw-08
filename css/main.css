@@ -761,36 +761,37 @@ img {
 .team__item {
   text-align: center;
   flex-basis: 350px;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 @media screen and (min-width: 480px) {
   .team__item {
     flex-basis: 450px;
-    background-color: var(--primary-white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
   }
 }
-@media screen and (min-width: 480px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .team__item {
     flex-basis: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 480px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team__item {
     flex-basis: calc((100% - 90px) / 4);
   }
 }
-.team__item__member {
+.team__member {
   padding-top: 30px;
   padding-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
-  .team__item__member {
+  .team__member {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 }
-.team .member__title {
+
+.member__title {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -799,23 +800,24 @@ img {
   text-transform: none;
   text-align: center;
 }
-.team .member__text {
+.member__text {
   margin-top: 0;
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
 }
-.team .member__soc-list {
+.member__soc-list {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.team .soc__item {
+
+.soc__item {
   width: 44px;
   height: 44px;
 }
-.team .soc__link-light {
+.soc__link-light {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -825,11 +827,11 @@ img {
   color: var(--icon-color);
   transition: color var(--typical-hover-transition), background-color var(--typical-hover-transition);
 }
-.team .soc__link-light:hover, .team .soc__link-light:focus {
+.soc__link-light:hover, .soc__link-light:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-.team .soc__icon {
+.soc__icon {
   fill: currentColor;
 }
 
