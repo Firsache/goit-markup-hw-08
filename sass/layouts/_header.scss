@@ -9,24 +9,38 @@
     padding-top: 5px;
     padding-bottom: 5px;
     @include tablet {
+      
       padding-top: 0px;
       padding-bottom: 0px;
     }
   }
   &__nav {
-    margin-left: 93px;
+    
     display: none;
+
     @include tablet {
       display: block;
+      margin-left: 87px;
+    }
+    @include desktop {
+      margin-left: 93px;
     }
   }
-  &__auth {
-    display: flex;
-    gap: 50px;
-    margin-left: auto;
+  &__auth {   
+
     display: none;
+
     @include tablet {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: auto;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      
     }
   }
 }
@@ -73,9 +87,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
+    @include tablet {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    @include desktop {      
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
     color: var(--primary-text-color);
 
@@ -132,8 +152,8 @@
   display: block;
   background-color: transparent;
   border: none;
-  top: 10;
-  left: 15;
+  top: 10px;
+  right: 15px;
   
 
   &:hover .menu-close-icon{
@@ -184,7 +204,7 @@
 }
 .mob-soc-list {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   &__item {
   }
   &__link {
@@ -212,6 +232,9 @@
 
     @include mobile {
       display: none;
+    }
+    @include tablet {
+      display: block;
     }
   }
 }
