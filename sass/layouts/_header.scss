@@ -91,10 +91,12 @@
     @include tablet {
       padding-top: 0px;
       padding-bottom: 0px;
+      font-size: 12px;
     }
     @include desktop {      
       padding-top: 32px;
       padding-bottom: 32px;
+      font-size: 14px;
     }
 
     color: var(--primary-text-color);
@@ -110,8 +112,19 @@
       color: var(--accent-color);
     }
   }
-  &__icon {
+  &__icon-mail {
     fill: currentColor;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 14px;
+      height: 10px;
+    }
+  }
+  &__icon-tel {
+    fill: currentColor;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 10px;
+      height: 14px;
+    }
   }
 }
 

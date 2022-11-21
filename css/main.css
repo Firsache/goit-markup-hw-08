@@ -97,6 +97,49 @@ img {
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -173,6 +216,7 @@ img {
   top: 50%;
   left: 50%;
   max-width: 450px;
+  width: 100%;
   min-height: 609px;
   padding: 40px;
   background-color: var(--modal-background-color);
@@ -233,6 +277,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: none;
   text-align: center;
+  color: var(--title-text-color);
 }
 @media screen and (min-width: 1200px) {
   .modal-title {
@@ -488,19 +533,36 @@ img {
   .auth__link {
     padding-top: 0px;
     padding-bottom: 0px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
   .auth__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
   }
 }
 .auth__link:hover, .auth__link:focus {
   color: var(--accent-color);
 }
-.auth__icon {
+.auth__icon-mail {
   fill: currentColor;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .auth__icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+.auth__icon-tel {
+  fill: currentColor;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .auth__icon-tel {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .menu-open {
@@ -651,7 +713,7 @@ img {
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero_desktop_2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desktop_2x.jpg);
   }
 }
 .hero__title {
@@ -835,14 +897,14 @@ img {
   fill: currentColor;
 }
 
-.clients {
+.clients__title {
+  margin-bottom: 50px;
+}
+.clients__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--typical-gap);
-}
-.clients__title {
-  margin-bottom: 50px;
 }
 .clients__link {
   width: 210px;
@@ -985,7 +1047,7 @@ img {
   .footer__container {
     gap: 70px;
     align-items: baseline;
-    justify-content: start;
+    justify-content: space-between;
     text-align: start;
     flex-direction: row;
   }
@@ -1068,6 +1130,7 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__tablet-container {
     flex-direction: row;
+    align-items: baseline;
     justify-content: space-around;
   }
 }
@@ -1075,7 +1138,6 @@ img {
   .footer__tablet-container {
     flex-direction: row;
     gap: 70px;
-    align-items: baseline;
     text-align: start;
   }
 }
